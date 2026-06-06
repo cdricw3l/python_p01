@@ -30,6 +30,7 @@ if __name__ == "__main__":
         Plant("Cactus", 5.0, 365), Plant("Sunflower", 80.0, 45),
         Plant("Fern", 15.0, 120)
     ]
+    print("=== Plant Factory Output ===")
     for plant in list_plants:
         created_msg()
         plant.show()
