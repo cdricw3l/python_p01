@@ -15,7 +15,7 @@ class Plant:
 
     def get_age(self: "Plant") -> int:
         return self._age
-    
+
     def get_name(self: "Plant") -> str:
         return self._name
 
@@ -46,4 +46,8 @@ if __name__ == "__main__":
     rose.set_height(-10)
     rose.set_age(-20)
     print(end="\n")
-    print(f"Current state: {rose.get_name()}: {rose.get_height()}cm, {rose.get_age()} days old")
+    print(
+        f"Current state: {rose.get_name()}: "
+        f"{rose.get_height()}cm",
+        f"{rose.get_age()} days old"
+    )

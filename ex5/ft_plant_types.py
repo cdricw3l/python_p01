@@ -53,7 +53,7 @@ class Flower(Plant):
         self._color = color
         self._blooming_status = 0
 
-    def show(self) -> None:
+    def show(self):
         if self._blooming_status == 0:
             super().show([
                 f"Color: {self._color}",
@@ -78,7 +78,7 @@ class Tree(Plant):
         super().__init__(name, height, age)
         self._trunk_diameter = diameter
 
-    def show(self) -> None:
+    def show(self):
         super().show([f"Trunk diameter: {round(self._trunk_diameter)}cm"])
 
     def produce_shade(self, long: float, wide: float):
@@ -100,7 +100,7 @@ class Vegetable(Plant):
         self._harvest_season = harvest_season
         self._nutritional_value = nutritional_value
 
-    def show(self) -> None:
+    def show(self):
         super().show([
             f"Harvest season: {self._harvest_season}",
             f"Nutritional value: {self._nutritional_value}"
