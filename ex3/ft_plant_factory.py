@@ -1,23 +1,21 @@
 class Plant:
-    Name: str
-    Height: float
-    Age: int
+    _name: str
+    _height: float
+    _age: int
 
     def __init__(self: "Plant", name: str, height: float, age: int) -> None:
         self.Name = name
         self.Height = height
         self.Age = age
 
-    def show(self: "Plant") -> None:
+    def show(self) -> None:
         print(f"{self.Name}: {round(self.Height, 1)}cm, {self.Age} days old")
 
-    def grow(self: "Plant", grow: float) -> None:
+    def grow(self, grow: float) -> None:
         self.Height += grow
 
-    def age(self: "Plant", age: int) -> None:
+    def age(self, age: int) -> None:
         self.Age += age
-
-# le f = placeholders
 
 
 def created_msg() -> None:

@@ -54,16 +54,14 @@ class Flower(Plant):
         self._blooming_status = 0
 
     def show(self):
-        if self._blooming_status == 0:
-            super().show([
-                f"Color: {self._color}",
-                f"{self._name} has not bloomed yet"
-            ])
+        if (self._blooming_status == 0):
+            bloom_msg = f"{self._name} has not bloomed yet"
         else:
-            super().show([
-                f"Color: {self._color}",
-                f"{self.get_name()} is blooming beautifully!"
-            ])
+            bloom_msg = f"{self.get_name()} is blooming beautifully!"
+        super().show([
+            f"Color: {self._color}",
+            bloom_msg
+        ])
 
     def bloom(self) -> None:
         self._blooming_status = 1
