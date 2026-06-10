@@ -27,13 +27,20 @@ class Plant:
             self._height += grow
             print(f"Height updated: {self.get_height()}cm")
 
-    def set_age(self: "Plant", age: int) -> None:
+    def set_age(self, age: int) -> None:
         if age < 0:
             print(f"{self._name}: Error, age can't be negative")
             print("Age update rejected")
         else:
             self._age += age
             print(f"Age updated: {self.get_age()} days")
+
+    def show(self):
+        print(
+            f"Current state: {rose._name}: "
+            f"{rose.get_height()}cm",
+            f"{rose.get_age()} days old"
+        )
 
 
 if __name__ == "__main__":
@@ -46,8 +53,4 @@ if __name__ == "__main__":
     rose.set_height(-10)
     rose.set_age(-20)
     print(end="\n")
-    print(
-        f"Current state: {rose.get_name()}: "
-        f"{rose.get_height()}cm",
-        f"{rose.get_age()} days old"
-    )
+    rose.show()

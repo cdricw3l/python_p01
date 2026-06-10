@@ -3,21 +3,21 @@ class Plant:
     _height: float
     _age: int
 
-    def __init__(self: "Plant", name: str, height: float, age: int) -> None:
+    def __init__(self, name: str, height: float, age: int) -> None:
         self._name = name
         self._height = height
         self._age = age
 
-    def get_height(self: "Plant") -> float:
+    def get_height(self) -> float:
         return self._height
 
-    def get_age(self: "Plant") -> int:
+    def get_age(self) -> int:
         return self._age
 
-    def get_name(self: "Plant") -> str:
+    def get_name(self) -> str:
         return self._name
 
-    def set_height(self: "Plant", grow: float) -> None:
+    def set_height(self, grow: float) -> None:
         if grow < 0:
             print(f"{self._name}: Error, height can't be negative")
             print("Height update rejected")
@@ -25,7 +25,7 @@ class Plant:
             self._height += grow
             print(f"Height updated: {self.get_height()}cm")
 
-    def set_age(self: "Plant", age: int) -> None:
+    def set_age(self, age: int) -> None:
         if age < 0:
             print(f"{self._name}: Error, age can't be negative")
             print("Age update rejected")
@@ -33,7 +33,7 @@ class Plant:
             self._age += age
             print(f"Age updated: {self.get_age()} days")
 
-    def show(self: "Plant", custom_msg: list[str]) -> None:
+    def show(self, custom_msg: list[str]) -> None:
         print(
             f"{self._name}: "
             f"{round(self._height, 1)}cm, "
@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     print("=== Garden Security System ===")
     print("=== Flower")
-    flower = Flower("rose", 15.0, 13, "red")
+    flower = Flower("Rose", 15.0, 10, "red")
     flower.show()
     print("[asking the rose to bloom]")
     flower.bloom()
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     tree = Tree("Oak", 200.0, 365, 5)
     tree.show()
     print("[asking the oak to produce shade]")
-    tree.produce_shade(200, 5)
+    tree.produce_shade(200.0, 5)
     print(end="\n")
     print("=== Vegetable")
     vegetable = Vegetable("Tomato", 5.0, 10, "April", 0)

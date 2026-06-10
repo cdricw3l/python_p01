@@ -4,18 +4,18 @@ class Plant:
     _age: int
 
     def __init__(self: "Plant", name: str, height: float, age: int) -> None:
-        self.Name = name
-        self.Height = height
-        self.Age = age
+        self._name = name
+        self._height = height
+        self._age = age
 
     def show(self) -> None:
-        print(f"{self.Name}: {round(self.Height, 1)}cm, {self.Age} days old")
+        print(f"{self._name}: {round(self._height, 1)}cm, {self._age} days old")
 
     def grow(self, grow: float) -> None:
-        self.Height += grow
+        self._height += grow
 
     def age(self, age: int) -> None:
-        self.Age += age
+        self._age += age
 
 
 def created_msg() -> None:
