@@ -55,14 +55,15 @@ class Plant:
             for msg in custom_msg:
                 print(msg)
         self._analytic["show"] += 1
-
+    # La methode older than est static car elle ne depend d'aucune cvariable de la classe
     @staticmethod
     def older_than_one(age: int) -> bool:
         return age > 1
 
+    #la methode ci dessous est une class methode . Il est possible d'apeller cette methode directement par Plant.class_test()
     @classmethod
     def class_test(cls):
-        return Plant("Unknown", 0, 0)
+        return cls("anonyme", 0, 0)
 
 class Flower(Plant):
     _color: str
@@ -149,7 +150,7 @@ def display_stat(plant: Plant):
     show: int = plant._analytic["show"]
     print(f"Stats: {grow} grow, {age} age, {show} show")
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 
 #     print("=== Garden Security System ===")
 #     print("=== Flower")
@@ -171,3 +172,7 @@ def display_stat(plant: Plant):
 #     print("[make tomato grow and age for 20 days]")
 #     vegetable.grow(42, 20)
 #     vegetable.show()
+    anomime = Plant.class_test()
+    anomime.show(None)
+    anomime.age(100)
+    anomime.show(None)
