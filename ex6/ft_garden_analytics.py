@@ -101,12 +101,13 @@ class Seed(Flower):
 
 class Tree(Plant):
     _trunk_diameter: float
-
+    _shade: int
     def __init__(
             self, name: str, height: float, age: int, diameter: float
             ) -> None:
         super().__init__(name, height, age)
         self._trunk_diameter = diameter
+        self._shade = 0
 
     def show(self):
         super().show([f"Trunk diameter: {round(self._trunk_diameter)}cm"])
@@ -116,6 +117,7 @@ class Tree(Plant):
             f"Tree Oak now produces a shade of {round(long, 2)}cm long",
             f"and {round(wide, 2)}cm wide."
         )
+        self._shade += 1
 
 
 class Vegetable(Plant):
